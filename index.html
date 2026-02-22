@@ -76,7 +76,13 @@ layout: default
 
             <div style="margin-bottom: 16px;">
                 <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 6px;">
-                    <span style="font-weight: 600;">{{ item.name }}</span>
+                    <div>
+                        <span style="font-weight: 600;">{{ item.name }}</span>
+                        {% if item.note %}
+                        <span style="display: block; font-size: 0.75rem; color: var(--text-muted); margin-top: 2px;">*
+                            {{ item.note }}</span>
+                        {% endif %}
+                    </div>
                     <span><span style="color: var(--success); font-weight: 600;">₹{{ item.raised }}</span> / ₹{{
                         item.target }} ({{ item_percent }}%)</span>
                 </div>

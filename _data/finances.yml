@@ -1,5 +1,5 @@
 target: 325000
-raised: 259666
+raised: 151333
 spent: 42750
 current_status: "Active Fundraising"
 breakdown:
@@ -8,7 +8,8 @@ breakdown:
     raised: 108333
   - name: "Abdukka's Brothers"
     target: 108333
-    raised: 108333
+    raised: 0
+    note: "Committed (Pending) & responsible for furnishing"
   - name: "Public Bridge Finance"
     target: 108334
     raised: 43000
