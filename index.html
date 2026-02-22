@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<h1>Project Amanah Dashboard</h1>
+
+<div class="financial-summary">
+  <h2>Financial Overview</h2>
+  <p><strong>Target:</strong> ${{ site.data.finances.target }}</p>
+  <p><strong>Raised:</strong> ${{ site.data.finances.raised }}</p>
+  <p><strong>Spent:</strong> ${{ site.data.finances.spent }}</p>
+</div>
+
+<div class="recent-updates">
+  <h2>Recent Updates</h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
