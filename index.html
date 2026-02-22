@@ -15,21 +15,24 @@ layout: default
             <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 12px;">
                 <span>About this Project</span>
             </div>
-            {% if site.data.about.youtube_embed %}
-            <div
-                style="width: 100%; aspect-ratio: 16/9; margin-bottom: 16px; border-radius: 8px; overflow: hidden; background: #000;">
-                {{ site.data.about.youtube_embed | replace: 'width="560"', 'style="width: 100%; height: 100%;"' |
-                replace: 'height="315"', '' }}
-            </div>
-            {% endif %}
             <p
                 style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0; margin-bottom: 16px;">
                 {{ site.data.about.about_text | default: "Project description goes here." }}
             </p>
-            <a href="{{ site.data.about.doc_link | default: '#' }}" target="_blank"
-                style="display: inline-block; background-color: var(--card-bg); color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.875rem; padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; transition: all 0.2s;">
-                📄 View Project Document
-            </a>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                {% if site.data.about.doc_link %}
+                <a href="{{ site.data.about.doc_link }}" target="_blank"
+                    style="display: inline-block; background-color: var(--card-bg); color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.875rem; padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; transition: all 0.2s;">
+                    📄 View Document
+                </a>
+                {% endif %}
+                {% if site.data.about.video_link %}
+                <a href="{{ site.data.about.video_link }}" target="_blank"
+                    style="display: inline-block; background-color: #ef4444; color: white; text-decoration: none; font-weight: 500; font-size: 0.875rem; padding: 8px 16px; border: none; border-radius: 6px; transition: all 0.2s;">
+                    ▶️ Watch Video
+                </a>
+                {% endif %}
+            </div>
         </div>
 
         <!-- Funding Progress -->
