@@ -10,6 +10,22 @@ layout: default
 <div class="dashboard-grid">
     <!-- Left Column: Metrics -->
     <div class="dashboard-left">
+        <!-- About Project Card -->
+        <div class="progress-section" style="margin-bottom: 20px;">
+            <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 12px;">
+                <span>About this Project</span>
+            </div>
+            <p
+                style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-top: 0; margin-bottom: 16px;">
+                {{ site.data.about.about_text | default: "Project description goes here." }}
+            </p>
+            <a href="{{ site.data.about.doc_link | default: '#' }}" target="_blank"
+                style="display: inline-block; background-color: var(--card-bg); color: var(--text-main); text-decoration: none; font-weight: 500; font-size: 0.875rem; padding: 8px 16px; border: 1px solid var(--border); border-radius: 6px; transition: all 0.2s;">
+                📄 View Project Document
+            </a>
+        </div>
+
+        <!-- Funding Progress -->
         <div class="progress-section" style="margin-bottom: 20px;">
             <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 20px;">
                 <span>Funding Progress</span>
