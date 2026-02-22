@@ -126,7 +126,12 @@ layout: default
                     <h3 class="post-title">
                         <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
                     </h3>
-                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                    <p class="post-excerpt" style="margin-bottom: 8px;">{{ post.excerpt | strip_html | truncatewords: 30
+                        }}</p>
+                    <a href="{{ post.url | relative_url }}"
+                        style="display: inline-block; font-size: 0.875rem; font-weight: 600; color: var(--primary); text-decoration: none; transition: color 0.2s;">
+                        Read full update & view media →
+                    </a>
                 </li>
                 {% else %}
                 <p>No updates yet.</p>
