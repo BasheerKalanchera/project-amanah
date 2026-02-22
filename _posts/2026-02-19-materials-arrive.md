@@ -11,5 +11,5 @@ This delivery includes Laterite stones, and M-Sand, allowing our construction te
 
 <div style="width: 100%; aspect-ratio: 16/9; margin-top: 24px; border-radius: 8px; overflow: hidden; background: #000;">
     <!-- PASTE YOUR YOUTUBE IFRAME CODE BELOW THIS LINE -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mOdcxSaZgQM?si=tgV7BUV78Sn6BjfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe style="width: 100%; height: 100%;" src="https://www.youtube.com/embed/mOdcxSaZgQM?si=tgV7BUV78Sn6BjfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
