@@ -38,7 +38,7 @@ layout: default
         <!-- Funding Progress -->
         <div class="progress-section" style="margin-bottom: 20px;">
             <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 20px;">
-                <span>Funding Progress</span>
+                <span>Total Funding Progress</span>
                 <span style="color: var(--primary);">{{ progress_percent }}%</span>
             </div>
 
@@ -46,27 +46,49 @@ layout: default
                 <div>
                     <span
                         style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Target</span>
-                    <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.target | replace: ",", ""
+                    <span style="font-size: 1.25rem; font-weight: 700;">₹{{ site.data.finances.target | replace: ",", ""
                         }}</span>
                 </div>
                 <div>
                     <span
                         style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Raised</span>
-                    <span style="font-size: 1.25rem; font-weight: 700; color: var(--success);">${{
+                    <span style="font-size: 1.25rem; font-weight: 700; color: var(--success);">₹{{
                         site.data.finances.raised | replace: ",", "" }}</span>
                 </div>
                 <div>
                     <span
                         style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Spent</span>
-                    <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.spent | replace: ",", ""
+                    <span style="font-size: 1.25rem; font-weight: 700;">₹{{ site.data.finances.spent | replace: ",", ""
                         }}</span>
                 </div>
             </div>
 
-            <div class="progress-track" style="margin-bottom: 12px;">
+            <div class="progress-track" style="margin-bottom: 24px;">
                 <div class="progress-fill" style="width: {{ progress_percent }}%"></div>
             </div>
-            <div style="font-size: 0.875rem; color: var(--text-muted); text-align: right;">
+
+            <h4 style="font-size: 1rem; margin-bottom: 12px; margin-top: 0;">Funding Breakdown</h4>
+
+            {% for item in site.data.finances.breakdown %}
+            {% assign item_target = item.target | times: 1.0 %}
+            {% assign item_raised = item.raised | times: 1.0 %}
+            {% assign item_percent = item_raised | divided_by: item_target | times: 100 | round: 1 %}
+
+            <div style="margin-bottom: 16px;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem; margin-bottom: 6px;">
+                    <span style="font-weight: 600;">{{ item.name }}</span>
+                    <span><span style="color: var(--success); font-weight: 600;">₹{{ item.raised }}</span> / ₹{{
+                        item.target }} ({{ item_percent }}%)</span>
+                </div>
+                <div class="progress-track" style="height: 6px;">
+                    <div class="progress-fill"
+                        style="width: {{ item_percent }}%; background-color: {% if item_percent >= 100 %}var(--success){% else %}var(--primary){% endif %};">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <div style="font-size: 0.875rem; color: var(--text-muted); text-align: right; margin-top: 16px;">
                 <strong>Current Status:</strong> {{ site.data.finances.current_status | default: "Active Fundraising" }}
             </div>
         </div>
