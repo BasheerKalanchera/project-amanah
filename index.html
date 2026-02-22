@@ -2,28 +2,47 @@
 layout: default
 ---
 
-<h1>Project Amanah Dashboard</h1>
+<!-- Calculate Progress -->
+{% assign target = site.data.finances.target | times: 1.0 %}
+{% assign raised = site.data.finances.raised | times: 1.0 %}
+{% assign progress_percent = raised | divided_by: target | times: 100 | round: 1 %}
 
-<div class="financial-summary">
-  <h2>Financial Overview</h2>
-  <p><strong>Target:</strong> ${{ site.data.finances.target }}</p>
-  <p><strong>Raised:</strong> ${{ site.data.finances.raised }}</p>
-  <p><strong>Spent:</strong> ${{ site.data.finances.spent }}</p>
+<div class="financial-dashboard">
+    <div class="metric-card">
+        <span class="metric-label">Target</span>
+        <div class="metric-value">${{ site.data.finances.target | replace: ",", "" }}</div>
+    </div>
+    <div class="metric-card">
+        <span class="metric-label">Raised</span>
+        <div class="metric-value">${{ site.data.finances.raised | replace: ",", "" }}</div>
+    </div>
+    <div class="metric-card">
+        <span class="metric-label">Spent</span>
+        <div class="metric-value">${{ site.data.finances.spent | replace: ",", "" }}</div>
+    </div>
 </div>
 
-<div class="recent-updates">
-  <h2>Recent Updates</h2>
-  <ul class="post-list">
+<div class="progress-section">
+    <div class="progress-header">
+        <span>Funding Progress</span>
+        <span>{{ progress_percent }}%</span>
+    </div>
+    <div class="progress-track">
+        <div class="progress-fill" style="width: {{ progress_percent }}%"></div>
+    </div>
+</div>
+
+<h2 class="section-title">Recent Updates</h2>
+<ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
+    <li class="post-item">
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        <h3 class="post-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h3>
-        <p>{{ post.excerpt }}</p>
-      </li>
+        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </li>
+    {% else %}
+    <p>No updates yet.</p>
     {% endfor %}
-  </ul>
-</div>
+</ul>

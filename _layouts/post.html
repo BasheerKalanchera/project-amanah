@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="post-item" style="border-left: none; padding: 40px; margin-top: 20px;">
+    <header style="margin-bottom: 30px; border-bottom: 1px solid var(--border); padding-bottom: 20px;">
+        <h1 style="margin: 0 0 10px 0; font-size: 2rem; color: var(--primary);">{{ page.title }}</h1>
+        <span class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</span>
+    </header>
+
+    <div class="post-content">
+        {{ content }}
+    </div>
+
+    <div style="margin-top: 40px; text-align: center;">
+        <a href="{{ '/' | relative_url }}"
+            style="color: var(--primary); text-decoration: none; font-weight: 500;">&larr; Back to Dashboard</a>
+    </div>
+</article>
