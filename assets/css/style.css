@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -187,4 +187,51 @@ body {
 .site-footer a {
   color: var(--primary);
   text-decoration: none;
+}
+
+/* Two-Column Dashboard Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-right {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border);
+}
+
+.dashboard-right .section-title {
+  margin-top: 0;
+  border-bottom: 2px solid var(--border);
+}
+
+.scrollable-updates {
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 16px;
+}
+
+/* Custom Scrollbar */
+.scrollable-updates::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-updates::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollable-updates::-webkit-scrollbar-thumb {
+  background-color: var(--border);
+  border-radius: 20px;
 }

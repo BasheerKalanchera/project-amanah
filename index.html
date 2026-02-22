@@ -7,67 +7,77 @@ layout: default
 {% assign raised = site.data.finances.raised | times: 1.0 %}
 {% assign progress_percent = raised | divided_by: target | times: 100 | round: 1 %}
 
-<div class="progress-section" style="margin-bottom: 20px;">
-    <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 20px;">
-        <span>Funding Progress</span>
-        <span style="color: var(--primary);">{{ progress_percent }}%</span>
+<div class="dashboard-grid">
+    <!-- Left Column: Metrics -->
+    <div class="dashboard-left">
+        <div class="progress-section" style="margin-bottom: 20px;">
+            <div class="progress-header" style="font-size: 1.25rem; margin-bottom: 20px;">
+                <span>Funding Progress</span>
+                <span style="color: var(--primary);">{{ progress_percent }}%</span>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; text-align: center;">
+                <div>
+                    <span
+                        style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Target</span>
+                    <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.target | replace: ",", ""
+                        }}</span>
+                </div>
+                <div>
+                    <span
+                        style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Raised</span>
+                    <span style="font-size: 1.25rem; font-weight: 700; color: var(--success);">${{
+                        site.data.finances.raised | replace: ",", "" }}</span>
+                </div>
+                <div>
+                    <span
+                        style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Spent</span>
+                    <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.spent | replace: ",", ""
+                        }}</span>
+                </div>
+            </div>
+
+            <div class="progress-track" style="margin-bottom: 12px;">
+                <div class="progress-fill" style="width: {{ progress_percent }}%"></div>
+            </div>
+            <div style="font-size: 0.875rem; color: var(--text-muted); text-align: right;">
+                <strong>Current Status:</strong> {{ site.data.finances.current_status | default: "Active Fundraising" }}
+            </div>
+        </div>
+
+        <div class="progress-section" style="margin-bottom: 20px;">
+            <div class="progress-header">
+                <span>Construction Progress</span>
+                <span>{{ site.data.project.completion_percentage | default: 0 }}%</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill"
+                    style="width: {{ site.data.project.completion_percentage | default: 0 }}%; background-color: var(--primary);">
+                </div>
+            </div>
+            <div style="font-size: 0.875rem; color: var(--text-muted); margin-top: 12px; text-align: right;">
+                <strong>Current Phase:</strong> {{ site.data.project.current_phase | default: "Planning" }}
+            </div>
+        </div>
     </div>
 
-    <div style="display: flex; justify-content: space-between; margin-bottom: 15px; text-align: center;">
-        <div>
-            <span
-                style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Target</span>
-            <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.target | replace: ",", ""
-                }}</span>
+    <!-- Right Column: Updates -->
+    <div class="dashboard-right">
+        <h2 class="section-title">Recent Updates</h2>
+        <div class="scrollable-updates">
+            <ul class="post-list">
+                {% for post in site.posts %}
+                <li class="post-item">
+                    <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+                    <h3 class="post-title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h3>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+                </li>
+                {% else %}
+                <p>No updates yet.</p>
+                {% endfor %}
+            </ul>
         </div>
-        <div>
-            <span
-                style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Raised</span>
-            <span style="font-size: 1.25rem; font-weight: 700; color: var(--success);">${{ site.data.finances.raised |
-                replace: ",", "" }}</span>
-        </div>
-        <div>
-            <span
-                style="display: block; font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 600;">Spent</span>
-            <span style="font-size: 1.25rem; font-weight: 700;">${{ site.data.finances.spent | replace: ",", ""
-                }}</span>
-        </div>
-    </div>
-
-    <div class="progress-track" style="margin-bottom: 12px;">
-        <div class="progress-fill" style="width: {{ progress_percent }}%"></div>
-    </div>
-    <div style="font-size: 0.875rem; color: var(--text-muted); text-align: right;">
-        <strong>Current Status:</strong> {{ site.data.finances.current_status | default: "Active Fundraising" }}
     </div>
 </div>
-
-<div class="progress-section" style="margin-bottom: 50px;">
-    <div class="progress-header">
-        <span>Construction Progress</span>
-        <span>{{ site.data.project.completion_percentage | default: 0 }}%</span>
-    </div>
-    <div class="progress-track">
-        <div class="progress-fill"
-            style="width: {{ site.data.project.completion_percentage | default: 0 }}%; background-color: var(--primary);">
-        </div>
-    </div>
-    <div style="font-size: 0.875rem; color: var(--text-muted); margin-top: 12px; text-align: right;">
-        <strong>Current Phase:</strong> {{ site.data.project.current_phase | default: "Planning" }}
-    </div>
-</div>
-
-<h2 class="section-title">Recent Updates</h2>
-<ul class="post-list">
-    {% for post in site.posts %}
-    <li class="post-item">
-        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-        <h3 class="post-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h3>
-        <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
-    </li>
-    {% else %}
-    <p>No updates yet.</p>
-    {% endfor %}
-</ul>
