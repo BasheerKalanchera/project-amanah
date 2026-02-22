@@ -32,6 +32,21 @@ layout: default
     </div>
 </div>
 
+<div class="progress-section" style="margin-bottom: 50px;">
+    <div class="progress-header">
+        <span>Construction Progress</span>
+        <span>{{ site.data.project.completion_percentage | default: 0 }}%</span>
+    </div>
+    <div class="progress-track">
+        <div class="progress-fill"
+            style="width: {{ site.data.project.completion_percentage | default: 0 }}%; background-color: var(--primary);">
+        </div>
+    </div>
+    <div style="font-size: 0.875rem; color: var(--text-muted); margin-top: 12px; text-align: right;">
+        <strong>Current Phase:</strong> {{ site.data.project.current_phase | default: "Planning" }}
+    </div>
+</div>
+
 <h2 class="section-title">Recent Updates</h2>
 <ul class="post-list">
     {% for post in site.posts %}
