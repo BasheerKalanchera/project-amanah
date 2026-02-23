@@ -14,3 +14,7 @@ Thank you to everyone who has supported the project.
     
     <img src="{{ '/assets/images/Door-placing.jpeg' | relative_url }}" alt="Door Placing" style="width: 100%; border-radius: 8px; object-fit: cover; aspect-ratio: 4/3; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
 </div>
+
+<div style="position: relative; width: 100%; aspect-ratio: 16/9; margin-top: 24px; border-radius: 8px; overflow: hidden; background: #000;">
+    <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/W0kPndVDmGY?si=u-5KJ-YF19Gyw5DN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
