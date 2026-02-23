@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "How to Contribute"
 ---
 
@@ -39,5 +39,3 @@ You can send it via WhatsApp to **+91 90743 45449**.
 ---
 
 *JazakAllah Khair — May Allah accept your contribution and reward you with Jannah.*
-
-← [Back to Dashboard]({{ '/' | relative_url }})
