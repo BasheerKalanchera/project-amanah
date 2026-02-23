@@ -12,7 +12,7 @@ breakdown:
     note: "Committed (Pending)"
   - name: "Public Bridge Finance"
     target: 108334
-    raised: 49000
+    raised: 59000
     donors:
       - name: "Abdullah Siddique"
         amount: 25000
