@@ -26,8 +26,8 @@ The trust does not have a dedicated account set up yet. Until that is done, I am
 
 | | |
 |---|---|
-| **UPI ID** | `basheerkalanchera-1@okhdfcbank` |
-| **UPI Number** | `9074345449` |
+| **UPI ID** | basheerkalanchera-1@okhdfcbank |
+| **UPI Number** | 9074345449 |
 
 ---
 
