@@ -13,3 +13,7 @@ This delivery includes Laterite stones, and M-Sand, allowing our construction te
     <!-- PASTE YOUR YOUTUBE IFRAME CODE BELOW THIS LINE -->
     <iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/mOdcxSaZgQM?si=tgV7BUV78Sn6BjfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
+
+<div style="margin-top: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+    <img src="{{ '/assets/images/M Sand.jpeg' | relative_url }}" alt="M-Sand Delivery" style="width: 100%; height: auto; display: block;">
+</div>
