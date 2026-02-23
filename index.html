@@ -91,6 +91,24 @@ layout: default
                         style="width: {{ item_percent }}%; background-color: {% if item_percent >= 100 %}var(--success){% else %}var(--primary){% endif %};">
                     </div>
                 </div>
+                {% if item.donors %}
+                <details style="margin-top: 10px;">
+                    <summary
+                        style="cursor: pointer; font-size: 0.8rem; font-weight: 600; color: var(--primary); list-style: none; user-select: none;">
+                        ▶ View Donor List ({{ item.donors | size }})
+                    </summary>
+                    <ul style="margin: 8px 0 0 0; padding: 0; list-style: none;">
+                        {% for donor in item.donors %}
+                        <li
+                            style="display: flex; justify-content: space-between; font-size: 0.8rem; padding: 4px 0; border-bottom: 1px solid var(--border);">
+                            <span>{{ donor.name }}{% if donor.note %} <em style="color: var(--text-muted);">({{
+                                    donor.note }})</em>{% endif %}</span>
+                            <span style="font-weight: 600; color: var(--success);">₹{{ donor.amount }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </details>
+                {% endif %}
             </div>
             {% endfor %}
 
