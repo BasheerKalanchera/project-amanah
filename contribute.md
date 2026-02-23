@@ -24,6 +24,8 @@ The trust does not have a dedicated account set up yet. Until that is done, I am
 
 ## 📱 UPI (Recommended — Instant Transfer)
 
+<a href="upi://pay?pa=basheerkalanchera-1@okhdfcbank&pn=Basheer%20Kalanchera&tn=Project%20Amanah&cu=INR" style="display:inline-block;padding:14px 32px;background-color:#1095c1;color:#ffffff;font-size:1.1rem;font-weight:600;text-decoration:none;border-radius:8px;margin-bottom:16px;">Open UPI App</a>
+
 | | |
 |---|---|
 | **UPI ID** | basheerkalanchera-1@okhdfcbank |
