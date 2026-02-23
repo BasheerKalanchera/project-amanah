@@ -5,7 +5,7 @@ date: 2026-02-21 10:00:00 +0530
 categories: update
 ---
 
-Great progress today! The wooden door and window frames have been delivered and are now ready for installation.
+Great progress today! New steel door and window frames have been delivered and are now ready for installation.
 
 This is a significant step forward in the construction phase — having the frames on-site means the structure can now be properly enclosed. Thank you again to all our generous donors for making this possible!
 
