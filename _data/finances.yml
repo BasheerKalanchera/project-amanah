@@ -32,7 +32,6 @@ breakdown:
       - name: "Muhammed Binil"
         amount: 3000
       - name: "Thakkiyudheen"
-        amount: 3000
-        note: "Committed"
+        amount: 3000        
       - name: "Shafeequ Ali"
         amount: 1000

@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: "How to Contribute"
+show_date: false
 ---
 
 *Assalamu Alaikum wa Rahmatullahi wa Barakatuh,*
