@@ -1,6 +1,6 @@
 target: 325000
-raised: 208933
-spent: 70350
+raised: 213533
+spent: 74950
 current_status: "Active Fundraising"
 breakdown:
   - name: "Kalanchira Family Trust"
@@ -8,7 +8,7 @@ breakdown:
     raised: 108333
   - name: "Abdukka's Brothers"
     target: 108333
-    raised: 27600    
+    raised: 32200    
   - name: "Public Bridge Finance"
     target: 108334
     raised: 73000
