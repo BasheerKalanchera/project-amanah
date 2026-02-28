@@ -1,5 +1,5 @@
 target: 325000
-raised: 233433
+raised: 235433
 spent: 76850
 current_status: "Active Fundraising"
 breakdown:
@@ -29,7 +29,7 @@ breakdown:
         amount: 1900    
   - name: "Public Bridge Finance"
     target: 108334
-    raised: 91000
+    raised: 93000
     donors:
       - name: "Abdullah Siddique"
         amount: 25000
@@ -58,7 +58,9 @@ breakdown:
       - name: "Thakkiyudheen"
         amount: 3000  
       - name: "Mohammed Hasif"
-        amount: 3000        
+        amount: 3000
+      - name: "Sharafu C K"
+        amount: 2000 
       - name: "Shafeequ Ali"
         amount: 1000
       - name: "Thoyyib Wayanad"
