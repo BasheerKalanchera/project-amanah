@@ -6,7 +6,7 @@ breakdown:
   - name: "Kalanchira Family Trust"
     target: 108333
     raised: 108333
-    spent:68250
+    spent: 68250
     breakup:
       - name: "Laterite stones"
         amount: 42750
