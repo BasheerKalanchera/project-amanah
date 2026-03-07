@@ -1,20 +1,30 @@
 target: 325000
 raised: 235433
-spent: 76850
+spent: 123700
 current_status: "Active Fundraising"
 breakdown:
   - name: "Kalanchira Family Trust"
     target: 108333
     raised: 108333
-    spent:
+    spent:68250
+    breakup:
       - name: "Laterite stones"
         amount: 42750
+      - name: "Steel for Lintel Centering"
+        amount: 25500
   - name: "Abdukka's Brothers"
     target: 108333
-    raised: 34100
+    raised: 55450
+    spent: 55450
     breakup:
+      - name: "M Sand"
+        amount: 5000
       - name: "Door frame"
         amount: 12100
+      - name: "Cement 5 bags"
+        amount: 1900
+      - name: "Labor Feb 22"
+        amount: 4600
       - name: "Ventilator"
         amount: 1300 
       - name: "Labor Feb 23"
@@ -22,11 +32,15 @@ breakdown:
       - name: "Labor Feb 24"
         amount: 4600
       - name: "Labor Feb 25"
-        amount: 4600
+        amount: 4600      
       - name: "M Sand"
         amount: 5000
-      - name: "Cement 5 bags"
-        amount: 1900    
+      - name: "Mettal"
+        amount: 5500    
+      - name: "Centering Labor Mar 2"
+        amount: 2500
+      - name: "Centering Labor Mar 3"
+        amount: 3750      
   - name: "Public Bridge Finance"
     target: 108334
     raised: 93000
