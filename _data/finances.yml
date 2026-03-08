@@ -1,5 +1,5 @@
 target: 325000
-raised: 256783
+raised: 259283
 spent: 123700
 current_status: "Active Fundraising"
 breakdown:
@@ -43,13 +43,12 @@ breakdown:
         amount: 3750      
   - name: "Public Bridge Finance"
     target: 108334
-    raised: 93000
+    raised: 95500
     donors:
       - name: "Abdullah Siddique"
         amount: 25000
       - name: "Latheef Bhai"
-        amount: 10000
-        note: "Committed"
+        amount: 10000        
       - name: "Junaid"
         amount: 10000
         note: "Committed"
@@ -70,9 +69,11 @@ breakdown:
       - name: "Muhammed Binil"
         amount: 3000
       - name: "Thakkiyudheen"
-        amount: 3000  
+        amount: 3000
       - name: "Mohammed Hasif"
         amount: 3000
+      - name: "Usmanka Ponani"
+        amount: 2500
       - name: "Sharafu C K"
         amount: 2000 
       - name: "Shafeequ Ali"
