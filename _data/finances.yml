@@ -1,17 +1,19 @@
 target: 325000
 raised: 269283
-spent: 123700
+spent: 149700
 current_status: "Active Fundraising"
 breakdown:
   - name: "Kalanchira Family Trust"
     target: 108333
     raised: 108333
-    spent: 68250
+    spent: 94250
     breakup:
       - name: "Laterite stones"
         amount: 42750
       - name: "Steel for Lintel Centering"
         amount: 25500
+      - name: "Labor for Lintel work"
+        amount: 26000
   - name: "Abdukka's Brothers"
     target: 108333
     raised: 55450
@@ -43,7 +45,7 @@ breakdown:
         amount: 3750      
   - name: "Public Bridge Finance"
     target: 108334
-    raised: 105500
+    raised: 108334
     donors:
       - name: "Abdullah Siddique"
         amount: 25000
@@ -74,6 +76,8 @@ breakdown:
         amount: 3000
       - name: "Mohammed Hasif"
         amount: 3000
+      - name: "Shaji Thondiyil"
+        amount: 2834
       - name: "Usmanka Ponani"
         amount: 2500
       - name: "Sharafu C K"
