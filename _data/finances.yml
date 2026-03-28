@@ -1,12 +1,12 @@
 target: 325000
-raised: 269283
-spent: 149700
+raised: 306766  
+spent: 232250
 current_status: "Active Fundraising"
 breakdown:
   - name: "Kalanchira Family Trust"
     target: 108333
     raised: 108333
-    spent: 94250
+    spent: 142150
     breakup:
       - name: "Laterite stones"
         amount: 42750
@@ -14,10 +14,14 @@ breakdown:
         amount: 25500
       - name: "Labor for Lintel work"
         amount: 26000
+      - name: "Steel for Main Roof Centering"
+        amount: 27500
+      - name: "Labor for Main Roof Concerte pouring"
+        amount: 20400
   - name: "Abdukka's Brothers"
     target: 108333
-    raised: 55450
-    spent: 55450
+    raised: 90100
+    spent: 90100
     breakup:
       - name: "M Sand"
         amount: 5000
@@ -42,7 +46,17 @@ breakdown:
       - name: "Centering Labor Mar 2"
         amount: 2500
       - name: "Centering Labor Mar 3"
-        amount: 3750      
+        amount: 3750  
+      - name: "Masonry work above Lintel Labor Day 1"
+        amount: 2300 
+      - name: "Masonry work above Lintel Labor Day 2"
+        amount: 2300 
+      - name: "Masonry work above Lintel Labor Day 3"
+        amount: 3300
+      - name: "Masonry work laterite stones"
+        amount: 16750
+      - name: "Labor for Main Roof Centering"
+        amount: 10000
   - name: "Public Bridge Finance"
     target: 108334
     raised: 108334
