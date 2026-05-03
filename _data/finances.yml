@@ -1,12 +1,12 @@
 target: 325000
 raised: 306766  
-spent: 232250
+spent: 251150
 current_status: "Public Bridge Fundraising done, construction ongoing"
 breakdown:
   - name: "Kalanchira Family Trust"
     target: 108333
     raised: 108333
-    spent: 142150
+    spent: 161050 
     breakup:
       - name: "Laterite stones"
         amount: 42750
@@ -18,6 +18,8 @@ breakdown:
         amount: 27500
       - name: "Labor for Main Roof Concerte pouring"
         amount: 20400
+      - name: "Electric conduit pipe fitting"
+        amount: 18900
   - name: "Abdukka's Brothers"
     target: 108333
     raised: 90100
